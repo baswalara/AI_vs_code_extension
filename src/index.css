@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* Dark theme prose styling */
+.prose-invert {
+  color: #f9fafb;
+}
+
+.prose-invert h1,
+.prose-invert h2,
+.prose-invert h3,
+.prose-invert h4,
+.prose-invert h5,
+.prose-invert h6 {
+  color: #f9fafb;
+}
+
+.prose-invert p {
+  color: inherit;
+}
+
+.prose-invert code {
+  color: inherit;
+}
+
+.prose-invert pre {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #374151;
+}
+
+.prose-invert blockquote {
+  color: inherit;
+}
+
+.prose-invert strong {
+  color: inherit;
+}
+
+.prose-invert em {
+  color: inherit;
+}
+
+.prose-invert ul,
+.prose-invert ol {
+  color: inherit;
+}
+
+.prose-invert li {
+  color: inherit;
+}
+
+/* Animation for message appearance */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-enter {
+  animation: slideInUp 0.3s ease-out;
+}
+
+/* Ensure proper text color inheritance in dark mode */
+.prose-invert * {
+  color: inherit;
+}
