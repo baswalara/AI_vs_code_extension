@@ -7,7 +7,7 @@ export async function fetchChatResponse(message: string): Promise<string> {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'qwen/qwen3-235b-a22b:free', // or your preferred model
+        model: 'mistralai/mistral-small-3.2-24b-instruct:free', // or your preferred model
         messages: [{ role: 'user', content: message }],
       }),
     });
